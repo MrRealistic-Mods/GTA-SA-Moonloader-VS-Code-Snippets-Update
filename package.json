@@ -1,0 +1,56 @@
+{
+	"name": "GTASAMoonloader",
+	"icon": "images/logo.png",
+	"displayName": " GTA SA Moonloader ",
+	"description": "GTA SA Moonloader: Lua language support for Visual Studio Code",
+	"version": "0.0.2",
+	"publisher": "UmGeek",
+	"repository": {
+		"type": "GitHub",
+		"url": "https://github.com/UmGeek/snippets-moonloader-for-vscode"
+	},
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages",
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "lua",
+				"path": "./snippets/lua.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/moonloader.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/enums.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/moonadditions.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/imgui.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/moonadditions_vehicle_component.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/moonplus.json"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1769950586945,
+		"targetPlatform": "undefined",
+		"size": 1008866
+	}
+}
