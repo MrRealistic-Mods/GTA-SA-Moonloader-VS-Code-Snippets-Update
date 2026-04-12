@@ -1,6 +1,6 @@
 # GTA SA Moonloader VS Code Extension — Snippet Update
 
-This is an **add-on update** for the [GTA SA Moonloader VS Code extension by UmGeek](https://github.com/UmGeek/snippets-moonloader-for-vscode). It adds snippet coverage for two libraries that were missing from the original:
+This is an **add-on update** for the [GTA SA Moonloader VS Code extension by UmGeek](https://marketplace.visualstudio.com/items?itemName=UmGeek.GTASAMoonloader). It adds snippet coverage for two libraries that were missing from the original:
 
 - **MoonAdditions Vehicle Component API** — from the [Dante-1337 fork](https://github.com/Dante-1337/MoonAdditions/wiki/Vehicle-Component), which extends the original THE-FYP MoonAdditions with vehicle component, atomic object, and material manipulation
 - **MoonPlus** — a separate library by plasmaXZ covering Placeable, Entity, Physical, Vehicle, Transmission, Gear, Sound, Ped, Game Settings, Weather, and Weapon objects
