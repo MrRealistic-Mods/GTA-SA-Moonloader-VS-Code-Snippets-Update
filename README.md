@@ -24,19 +24,10 @@ This is an **add-on update** for the [GTA SA Moonloader VS Code extension by UmG
    C:\Users\<YourName>\.vscode\extensions\umgeek.gtasamoonloader-0.0.2\
    ```
 
-2. Copy `moonadditions_vehicle_component.json` and `moonplus.json` into the `snippets/` folder inside the extension directory:
-   ```
-   C:\Users\<YourName>\.vscode\extensions\umgeek.gtasamoonloader-0.0.2\snippets\
-   ```
+2. Copy the files and paste them in the extension's folder.
 
-3. Replace the existing `package.json` in the extension root with the one from this repo:
-   ```
-   C:\Users\<YourName>\.vscode\extensions\umgeek.gtasamoonloader-0.0.2\package.json
-   ```
+3. Restart VS Code.
 
-4. Restart VS Code.
-
-That's it — the new snippets will show up alongside the existing ones in any `.lua` file.
 
 ---
 
