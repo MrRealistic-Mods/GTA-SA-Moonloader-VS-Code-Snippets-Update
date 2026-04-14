@@ -1,0 +1,1136 @@
+{
+	"imgui": {
+		"body": "local imgui = require('imgui')",
+		"description": "ImGui\n\add ImGui require",
+		"prefix": "imgui",
+		"scope": "source.lua"
+	},
+	"OnDrawFrame": {
+		"body": "function imgui.OnDrawFrame()\n\t${0:body}\nend",
+		"description": "ImGui\n\function OnDrawFrame",
+		"prefix": "imgui.OnDrawFrame()",
+		"scope": "source.lua"
+	},
+	"imgui.Process": {
+		"body": "imgui.Process = ${0:bool}",
+		"description": "ImGui\n\imgui.Process",
+		"prefix": "imgui.Process",
+		"scope": "source.lua"
+	},
+	"GetKeyIndex": {
+		"body": "GetKeyIndex(${1:ImGuiKey imgui_key})",
+		"description": "ImGui\n\nreturn → int \n",
+		"prefix": "GetKeyIndex",
+		"scope": "source.lua"
+	},
+	"IsKeyDown": {
+		"body": "IsKeyDown(${1:int user_key_index})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsKeyDown",
+		"scope": "source.lua"
+	},
+	"IsKeyPressed": {
+		"body": "IsKeyPressed(${1:int user_key_index},${2:bool repeat = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsKeyPressed",
+		"scope": "source.lua"
+	},
+	"IsKeyReleased": {
+		"body": "IsKeyReleased(${1:int user_key_index})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsKeyReleased",
+		"scope": "source.lua"
+	},
+	"GetKeyPressedAmount": {
+		"body": "GetKeyPressedAmount(${1:int key_index},${2:float repeat_delay},${3:float rate})",
+		"description": "ImGui\n\nreturn → int \n",
+		"prefix": "GetKeyPressedAmount",
+		"scope": "source.lua"
+	},
+	"IsMouseDown": {
+		"body": "IsMouseDown(${1:int button})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseDown",
+		"scope": "source.lua"
+	},
+	"IsMouseClicked": {
+		"body": "IsMouseClicked(${1:int button},${2:bool repeat = false})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseClicked",
+		"scope": "source.lua"
+	},
+	"IsMouseDoubleClicked": {
+		"body": "IsMouseDoubleClicked(${1:int button})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseDoubleClicked",
+		"scope": "source.lua"
+	},
+	"IsMouseReleased": {
+		"body": "IsMouseReleased(${1:int button})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseReleased",
+		"scope": "source.lua"
+	},
+	"IsMouseDragging": {
+		"body": "IsMouseDragging(${1:int button = 0},${2:float lock_threshold = -1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseDragging",
+		"scope": "source.lua"
+	},
+	"IsMouseHoveringRect": {
+		"body": "IsMouseHoveringRect(${1:const ImVec2& r_min},${2:const ImVec2& r_max},${3:bool clip = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMouseHoveringRect",
+		"scope": "source.lua"
+	},
+	"IsMousePosValid": {
+		"body": "IsMousePosValid(${1:const ImVec2* mouse_pos = NULL})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsMousePosValid",
+		"scope": "source.lua"
+	},
+	"GetMousePos": {
+		"body": "GetMousePos()",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetMousePos",
+		"scope": "source.lua"
+	},
+	"GetMousePosOnOpeningCurrentPopup": {
+		"body": "GetMousePosOnOpeningCurrentPopup()",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetMousePosOnOpeningCurrentPopup",
+		"scope": "source.lua"
+	},
+	"GetMouseDragDelta": {
+		"body": "GetMouseDragDelta(${1:int button = 0},${2:float lock_threshold = -1.0f})",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetMouseDragDelta",
+		"scope": "source.lua"
+	},
+	"GetClipboardText": {
+		"body": "GetClipboardText()",
+		"description": "ImGui\n\nreturn → string \n",
+		"prefix": "GetClipboardText",
+		"scope": "source.lua"
+	},
+	"SetClipboardText": {
+		"body": "SetClipboardText(${1:string})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetClipboardText",
+		"scope": "source.lua"
+	},
+	"IsItemHovered": {
+		"body": "IsItemHovered(${1:ImGuiHoveredFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsItemHovered",
+		"scope": "source.lua"
+	},
+	"IsItemActive": {
+		"body": "IsItemActive()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsItemActive",
+		"scope": "source.lua"
+	},
+	"IsItemClicked": {
+		"body": "IsItemClicked(${1:int mouse_button = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsItemClicked",
+		"scope": "source.lua"
+	},
+	"IsItemVisible": {
+		"body": "IsItemVisible()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsItemVisible",
+		"scope": "source.lua"
+	},
+	"IsAnyItemHovered": {
+		"body": "IsAnyItemHovered()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsAnyItemHovered",
+		"scope": "source.lua"
+	},
+	"IsAnyItemActive": {
+		"body": "IsAnyItemActive()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsAnyItemActive",
+		"scope": "source.lua"
+	},
+	"IsWindowFocused": {
+		"body": "IsWindowFocused()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsWindowFocused",
+		"scope": "source.lua"
+	},
+	"IsWindowHovered": {
+		"body": "IsWindowHovered(${1:ImGuiHoveredFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsWindowHovered",
+		"scope": "source.lua"
+	},
+	"IsRootWindowFocused": {
+		"body": "IsRootWindowFocused()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsRootWindowFocused",
+		"scope": "source.lua"
+	},
+	"IsRootWindowOrAnyChildFocused": {
+		"body": "IsRootWindowOrAnyChildFocused()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsRootWindowOrAnyChildFocused",
+		"scope": "source.lua"
+	},
+	"IsRootWindowOrAnyChildHovered": {
+		"body": "IsRootWindowOrAnyChildHovered(${1:ImGuiHoveredFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsRootWindowOrAnyChildHovered",
+		"scope": "source.lua"
+	},
+	"IsAnyWindowHovered": {
+		"body": "IsAnyWindowHovered()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsAnyWindowHovered",
+		"scope": "source.lua"
+	},
+	"IsRectVisible": {
+		"body": "IsRectVisible(${1:const ImVec2& size})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsRectVisible",
+		"scope": "source.lua"
+	},
+	"IsRectVisible": {
+		"body": "IsRectVisible(${1:const ImVec2& rect_min},${2:const ImVec2& rect_max})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsRectVisible",
+		"scope": "source.lua"
+	},
+	"PushID": {
+		"body": "PushID(${1:const char* str_id})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "PushID",
+		"scope": "source.lua"
+	},
+	"PushID": {
+		"body": "PushID(${1:const char* str_id_begin},${2:const char* str_id_end})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "PushID",
+		"scope": "source.lua"
+	},
+	"PushID": {
+		"body": "PushID(${1:const void* ptr_id})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "PushID",
+		"scope": "source.lua"
+	},
+	"PushID": {
+		"body": "PushID(${1:int int_id})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "PushID",
+		"scope": "source.lua"
+	},
+	"PopID": {
+		"body": "PopID()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "PopID",
+		"scope": "source.lua"
+	},
+	"TextUnformatted": {
+		"body": "TextUnformatted(${1:const char* text},${2:const char* text_end = NULL})",
+		"description": "ImGui\n\nreturn → TextUnformatted(const char* text, const char* text_end \n",
+		"prefix": "TextUnformatted",
+		"scope": "source.lua"
+	},
+	"Text": {
+		"body": "Text(${1:const char* fmt},${2:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Text",
+		"scope": "source.lua"
+	},
+	"TextV": {
+		"body": "TextV(${1:const char* fmt},${2:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextV",
+		"scope": "source.lua"
+	},
+	"TextColored": {
+		"body": "TextColored(${1:const ImVec4& col},${2:const char* fmt},${3:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextColored",
+		"scope": "source.lua"
+	},
+	"TextColoredV": {
+		"body": "TextColoredV(${1:const ImVec4& col},${2:const char* fmt},${3:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextColoredV",
+		"scope": "source.lua"
+	},
+	"TextDisabled": {
+		"body": "TextDisabled(${1:const char* fmt},${2:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextDisabled",
+		"scope": "source.lua"
+	},
+	"TextDisabledV": {
+		"body": "TextDisabledV(${1:const char* fmt},${2:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextDisabledV",
+		"scope": "source.lua"
+	},
+	"TextWrapped": {
+		"body": "TextWrapped(${1:const char* fmt},${2:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextWrapped",
+		"scope": "source.lua"
+	},
+	"TextWrappedV": {
+		"body": "TextWrappedV(${1:const char* fmt},${2:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TextWrappedV",
+		"scope": "source.lua"
+	},
+	"LabelText": {
+		"body": "LabelText(${1:const char* label},${2:const char* fmt},${3:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "LabelText",
+		"scope": "source.lua"
+	},
+	"LabelTextV": {
+		"body": "LabelTextV(${1:const char* label},${2:const char* fmt},${3:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "LabelTextV",
+		"scope": "source.lua"
+	},
+	"BulletText": {
+		"body": "BulletText(${1:const char* fmt},${2:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "BulletText",
+		"scope": "source.lua"
+	},
+	"BulletTextV": {
+		"body": "BulletTextV(${1:const char* fmt},${2:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "BulletTextV",
+		"scope": "source.lua"
+	},
+	"Bullet": {
+		"body": "Bullet()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Bullet",
+		"scope": "source.lua"
+	},
+	"Button": {
+		"body": "Button(${1:const char* label},${2:const ImVec2& size = ImVec20},${3:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Button",
+		"scope": "source.lua"
+	},
+	"SmallButton": {
+		"body": "SmallButton(${1:const char* label})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SmallButton",
+		"scope": "source.lua"
+	},
+	"InvisibleButton": {
+		"body": "InvisibleButton(${1:const char* str_id},${2:const ImVec2& size})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InvisibleButton",
+		"scope": "source.lua"
+	},
+	"Image": {
+		"body": "Image(${1:ImTextureID user_texture_id},${2:const ImVec2& size},${3:const ImVec2& uv0 = ImVec20},${4:})",
+		"description": "ImGui\n\nreturn → Image(ImTextureID user_texture_id, const ImVec2& size, const ImVec2& uv0 \n",
+		"prefix": "Image",
+		"scope": "source.lua"
+	},
+	"ImageButton": {
+		"body": "ImageButton(${1:ImTextureID user_texture_id},${2:const ImVec2& size},${3:const ImVec2& uv0 = ImVec20},${4:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ImageButton",
+		"scope": "source.lua"
+	},
+	"Checkbox": {
+		"body": "Checkbox(${1:const char* label},${2:bool* v})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Checkbox",
+		"scope": "source.lua"
+	},
+	"CheckboxFlags": {
+		"body": "CheckboxFlags(${1:const char* label},${2:unsigned int* flags},${3:unsigned int flags_value})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "CheckboxFlags",
+		"scope": "source.lua"
+	},
+	"RadioButton": {
+		"body": "RadioButton(${1:const char* label},${2:bool active})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "RadioButton",
+		"scope": "source.lua"
+	},
+	"RadioButton": {
+		"body": "RadioButton(${1:const char* label},${2:int* v},${3:int v_button})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "RadioButton",
+		"scope": "source.lua"
+	},
+	"Combo": {
+		"body": "Combo(${1:const char* label},${2:int* current_item},${3:const char* const* items},${4:int items_count},${5:int height_in_items = -1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Combo",
+		"scope": "source.lua"
+	},
+	"Combo": {
+		"body": "Combo(${1:const char* label},${2:int* current_item},${3:const char* items_separated_by_zeros},${4:int height_in_items = -1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Combo",
+		"scope": "source.lua"
+	},
+	"Combo": {
+		"body": "Combo(${1:const char* label},${2:int* current_item},${3:bool *items_getter})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Combo",
+		"scope": "source.lua"
+	},
+	"PlotLines": {
+		"body": "PlotLines(${1:const char* label},${2:const float* values},${3:int values_count},${4:int values_offset = 0},${5:const char* overlay_text = NULL},${6:float scale_min = FLT_MAX},${7:float scale_max = FLT_MAX},${8:ImVec2 graph_size = ImVec20},${9:})",
+		"description": "ImGui\n\nreturn → PlotLines(const char* label, const float* values, int values_count, int values_offset \n",
+		"prefix": "PlotLines",
+		"scope": "source.lua"
+	},
+	"PlotLines": {
+		"body": "PlotLines(${1:const char* label},${2:float *values_getter})",
+		"description": "ImGui\n\nreturn → PlotLines(const char* label, float (*values_getter)(void* data, int idx), void* data, int values_count, int values_offset \n",
+		"prefix": "PlotLines",
+		"scope": "source.lua"
+	},
+	"PlotHistogram": {
+		"body": "PlotHistogram(${1:const char* label},${2:const float* values},${3:int values_count},${4:int values_offset = 0},${5:const char* overlay_text = NULL},${6:float scale_min = FLT_MAX},${7:float scale_max = FLT_MAX},${8:ImVec2 graph_size = ImVec20},${9:})",
+		"description": "ImGui\n\nreturn → PlotHistogram(const char* label, const float* values, int values_count, int values_offset \n",
+		"prefix": "PlotHistogram",
+		"scope": "source.lua"
+	},
+	"PlotHistogram": {
+		"body": "PlotHistogram(${1:const char* label},${2:float *values_getter})",
+		"description": "ImGui\n\nreturn → PlotHistogram(const char* label, float (*values_getter)(void* data, int idx), void* data, int values_count, int values_offset \n",
+		"prefix": "PlotHistogram",
+		"scope": "source.lua"
+	},
+	"ProgressBar": {
+		"body": "ProgressBar(${1:float fraction},${2:const ImVec2& size_arg = ImVec2-1},${3:})",
+		"description": "ImGui\n\nreturn → ProgressBar(float fraction, const ImVec2& size_arg \n",
+		"prefix": "ProgressBar",
+		"scope": "source.lua"
+	},
+	"DragFloat": {
+		"body": "DragFloat(${1:const char* label},${2:float* v},${3:float v_speed = 1.0f},${4:float v_min = 0.0f},${5:float v_max = 0.0f},${6:const char* display_format = "%.3f"},${7:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragFloat",
+		"scope": "source.lua"
+	},
+	"DragFloat2": {
+		"body": "DragFloat2(${1:const char* label},${2:float v[2]},${3:float v_speed = 1.0f},${4:float v_min = 0.0f},${5:float v_max = 0.0f},${6:const char* display_format = "%.3f"},${7:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragFloat2",
+		"scope": "source.lua"
+	},
+	"DragFloat3": {
+		"body": "DragFloat3(${1:const char* label},${2:float v[3]},${3:float v_speed = 1.0f},${4:float v_min = 0.0f},${5:float v_max = 0.0f},${6:const char* display_format = "%.3f"},${7:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragFloat3",
+		"scope": "source.lua"
+	},
+	"DragFloat4": {
+		"body": "DragFloat4(${1:const char* label},${2:float v[4]},${3:float v_speed = 1.0f},${4:float v_min = 0.0f},${5:float v_max = 0.0f},${6:const char* display_format = "%.3f"},${7:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragFloat4",
+		"scope": "source.lua"
+	},
+	"DragFloatRange2": {
+		"body": "DragFloatRange2(${1:const char* label},${2:float* v_current_min},${3:float* v_current_max},${4:float v_speed = 1.0f},${5:float v_min = 0.0f},${6:float v_max = 0.0f},${7:const char* display_format = "%.3f"},${8:const char* display_format_max = NULL},${9:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragFloatRange2",
+		"scope": "source.lua"
+	},
+	"DragInt": {
+		"body": "DragInt(${1:const char* label},${2:int* v},${3:float v_speed = 1.0f},${4:int v_min = 0},${5:int v_max = 0},${6:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragInt",
+		"scope": "source.lua"
+	},
+	"DragInt2": {
+		"body": "DragInt2(${1:const char* label},${2:int v[2]},${3:float v_speed = 1.0f},${4:int v_min = 0},${5:int v_max = 0},${6:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragInt2",
+		"scope": "source.lua"
+	},
+	"DragInt3": {
+		"body": "DragInt3(${1:const char* label},${2:int v[3]},${3:float v_speed = 1.0f},${4:int v_min = 0},${5:int v_max = 0},${6:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragInt3",
+		"scope": "source.lua"
+	},
+	"DragInt4": {
+		"body": "DragInt4(${1:const char* label},${2:int v[4]},${3:float v_speed = 1.0f},${4:int v_min = 0},${5:int v_max = 0},${6:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragInt4",
+		"scope": "source.lua"
+	},
+	"DragIntRange2": {
+		"body": "DragIntRange2(${1:const char* label},${2:int* v_current_min},${3:int* v_current_max},${4:float v_speed = 1.0f},${5:int v_min = 0},${6:int v_max = 0},${7:const char* display_format = "%.0f"},${8:const char* display_format_max = NULL})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "DragIntRange2",
+		"scope": "source.lua"
+	},
+	"InputText": {
+		"body": "InputText(${1:const char* label},${2:char* buf},${3:size_t buf_size},${4:ImGuiInputTextFlags flags = 0},${5:ImGuiTextEditCallback callback = NULL},${6:void* user_data = NULL})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputText",
+		"scope": "source.lua"
+	},
+	"InputTextMultiline": {
+		"body": "InputTextMultiline(${1:const char* label},${2:char* buf},${3:size_t buf_size},${4:const ImVec2& size = ImVec20},${5:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputTextMultiline",
+		"scope": "source.lua"
+	},
+	"InputFloat": {
+		"body": "InputFloat(${1:const char* label},${2:float* v},${3:float step = 0.0f},${4:float step_fast = 0.0f},${5:int decimal_precision = -1},${6:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputFloat",
+		"scope": "source.lua"
+	},
+	"InputFloat2": {
+		"body": "InputFloat2(${1:const char* label},${2:float v[2]},${3:int decimal_precision = -1},${4:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputFloat2",
+		"scope": "source.lua"
+	},
+	"InputFloat3": {
+		"body": "InputFloat3(${1:const char* label},${2:float v[3]},${3:int decimal_precision = -1},${4:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputFloat3",
+		"scope": "source.lua"
+	},
+	"InputFloat4": {
+		"body": "InputFloat4(${1:const char* label},${2:float v[4]},${3:int decimal_precision = -1},${4:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputFloat4",
+		"scope": "source.lua"
+	},
+	"InputInt": {
+		"body": "InputInt(${1:const char* label},${2:int* v},${3:int step = 1},${4:int step_fast = 100},${5:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputInt",
+		"scope": "source.lua"
+	},
+	"InputInt2": {
+		"body": "InputInt2(${1:const char* label},${2:int v[2]},${3:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputInt2",
+		"scope": "source.lua"
+	},
+	"InputInt3": {
+		"body": "InputInt3(${1:const char* label},${2:int v[3]},${3:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputInt3",
+		"scope": "source.lua"
+	},
+	"InputInt4": {
+		"body": "InputInt4(${1:const char* label},${2:int v[4]},${3:ImGuiInputTextFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "InputInt4",
+		"scope": "source.lua"
+	},
+	"SliderFloat": {
+		"body": "SliderFloat(${1:const char* label},${2:float* v},${3:float v_min},${4:float v_max},${5:const char* display_format = "%.3f"},${6:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderFloat",
+		"scope": "source.lua"
+	},
+	"SliderFloat2": {
+		"body": "SliderFloat2(${1:const char* label},${2:float v[2]},${3:float v_min},${4:float v_max},${5:const char* display_format = "%.3f"},${6:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderFloat2",
+		"scope": "source.lua"
+	},
+	"SliderFloat3": {
+		"body": "SliderFloat3(${1:const char* label},${2:float v[3]},${3:float v_min},${4:float v_max},${5:const char* display_format = "%.3f"},${6:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderFloat3",
+		"scope": "source.lua"
+	},
+	"SliderFloat4": {
+		"body": "SliderFloat4(${1:const char* label},${2:float v[4]},${3:float v_min},${4:float v_max},${5:const char* display_format = "%.3f"},${6:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderFloat4",
+		"scope": "source.lua"
+	},
+	"SliderAngle": {
+		"body": "SliderAngle(${1:const char* label},${2:float* v_rad},${3:float v_degrees_min = -360.0f},${4:float v_degrees_max = +360.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderAngle",
+		"scope": "source.lua"
+	},
+	"SliderInt": {
+		"body": "SliderInt(${1:const char* label},${2:int* v},${3:int v_min},${4:int v_max},${5:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderInt",
+		"scope": "source.lua"
+	},
+	"SliderInt2": {
+		"body": "SliderInt2(${1:const char* label},${2:int v[2]},${3:int v_min},${4:int v_max},${5:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderInt2",
+		"scope": "source.lua"
+	},
+	"SliderInt3": {
+		"body": "SliderInt3(${1:const char* label},${2:int v[3]},${3:int v_min},${4:int v_max},${5:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderInt3",
+		"scope": "source.lua"
+	},
+	"SliderInt4": {
+		"body": "SliderInt4(${1:const char* label},${2:int v[4]},${3:int v_min},${4:int v_max},${5:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "SliderInt4",
+		"scope": "source.lua"
+	},
+	"VSliderFloat": {
+		"body": "VSliderFloat(${1:const char* label},${2:const ImVec2& size},${3:float* v},${4:float v_min},${5:float v_max},${6:const char* display_format = "%.3f"},${7:float power = 1.0f})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "VSliderFloat",
+		"scope": "source.lua"
+	},
+	"VSliderInt": {
+		"body": "VSliderInt(${1:const char* label},${2:const ImVec2& size},${3:int* v},${4:int v_min},${5:int v_max},${6:const char* display_format = "%.0f"})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "VSliderInt",
+		"scope": "source.lua"
+	},
+	"ColorEdit3": {
+		"body": "ColorEdit3(${1:const char* label},${2:float col[3]},${3:ImGuiColorEditFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ColorEdit3",
+		"scope": "source.lua"
+	},
+	"ColorEdit4": {
+		"body": "ColorEdit4(${1:const char* label},${2:float col[4]},${3:ImGuiColorEditFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ColorEdit4",
+		"scope": "source.lua"
+	},
+	"ColorPicker3": {
+		"body": "ColorPicker3(${1:const char* label},${2:float col[3]},${3:ImGuiColorEditFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ColorPicker3",
+		"scope": "source.lua"
+	},
+	"ColorPicker4": {
+		"body": "ColorPicker4(${1:const char* label},${2:float col[4]},${3:ImGuiColorEditFlags flags = 0},${4:const float* ref_col = NULL})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ColorPicker4",
+		"scope": "source.lua"
+	},
+	"ColorButton": {
+		"body": "ColorButton(${1:const char* desc_id},${2:const ImVec4& col},${3:ImGuiColorEditFlags flags = 0},${4:ImVec2 size = ImVec20},${5:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ColorButton",
+		"scope": "source.lua"
+	},
+	"SetColorEditOptions": {
+		"body": "SetColorEditOptions(${1:ImGuiColorEditFlags flags})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetColorEditOptions",
+		"scope": "source.lua"
+	},
+	"TreeNode": {
+		"body": "TreeNode(${1:const char* label})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNode",
+		"scope": "source.lua"
+	},
+	"TreeNode": {
+		"body": "TreeNode(${1:const char* str_id},${2:const char* fmt},${3:...})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNode",
+		"scope": "source.lua"
+	},
+	"TreeNode": {
+		"body": "TreeNode(${1:const void* ptr_id},${2:const char* fmt},${3:...})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNode",
+		"scope": "source.lua"
+	},
+	"TreeNodeV": {
+		"body": "TreeNodeV(${1:const char* str_id},${2:const char* fmt},${3:va_list args})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeV",
+		"scope": "source.lua"
+	},
+	"TreeNodeV": {
+		"body": "TreeNodeV(${1:const void* ptr_id},${2:const char* fmt},${3:va_list args})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeV",
+		"scope": "source.lua"
+	},
+	"TreeNodeEx": {
+		"body": "TreeNodeEx(${1:const char* label},${2:ImGuiTreeNodeFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeEx",
+		"scope": "source.lua"
+	},
+	"TreeNodeEx": {
+		"body": "TreeNodeEx(${1:const char* str_id},${2:ImGuiTreeNodeFlags flags},${3:const char* fmt},${4:...})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeEx",
+		"scope": "source.lua"
+	},
+	"TreeNodeEx": {
+		"body": "TreeNodeEx(${1:const void* ptr_id},${2:ImGuiTreeNodeFlags flags},${3:const char* fmt},${4:...})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeEx",
+		"scope": "source.lua"
+	},
+	"TreeNodeExV": {
+		"body": "TreeNodeExV(${1:const char* str_id},${2:ImGuiTreeNodeFlags flags},${3:const char* fmt},${4:va_list args})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeExV",
+		"scope": "source.lua"
+	},
+	"TreeNodeExV": {
+		"body": "TreeNodeExV(${1:const void* ptr_id},${2:ImGuiTreeNodeFlags flags},${3:const char* fmt},${4:va_list args})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "TreeNodeExV",
+		"scope": "source.lua"
+	},
+	"TreePush": {
+		"body": "TreePush(${1:const char* str_id = NULL})",
+		"description": "ImGui\n\nreturn → TreePush(const char* str_id \n",
+		"prefix": "TreePush",
+		"scope": "source.lua"
+	},
+	"TreePush": {
+		"body": "TreePush(${1:const void* ptr_id = NULL})",
+		"description": "ImGui\n\nreturn → TreePush(const void* ptr_id \n",
+		"prefix": "TreePush",
+		"scope": "source.lua"
+	},
+	"TreePop": {
+		"body": "TreePop()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TreePop",
+		"scope": "source.lua"
+	},
+	"TreeAdvanceToLabelPos": {
+		"body": "TreeAdvanceToLabelPos()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "TreeAdvanceToLabelPos",
+		"scope": "source.lua"
+	},
+	"GetTreeNodeToLabelSpacing": {
+		"body": "GetTreeNodeToLabelSpacing()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetTreeNodeToLabelSpacing",
+		"scope": "source.lua"
+	},
+	"SetNextTreeNodeOpen": {
+		"body": "SetNextTreeNodeOpen(${1:bool is_open},${2:ImGuiCond cond = 0})",
+		"description": "ImGui\n\nreturn → SetNextTreeNodeOpen(bool is_open, ImGuiCond cond \n",
+		"prefix": "SetNextTreeNodeOpen",
+		"scope": "source.lua"
+	},
+	"CollapsingHeader": {
+		"body": "CollapsingHeader(${1:const char* label},${2:ImGuiTreeNodeFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "CollapsingHeader",
+		"scope": "source.lua"
+	},
+	"CollapsingHeader": {
+		"body": "CollapsingHeader(${1:const char* label},${2:bool* p_open},${3:ImGuiTreeNodeFlags flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "CollapsingHeader",
+		"scope": "source.lua"
+	},
+	"Selectable": {
+		"body": "Selectable(${1:const char* label},${2:bool selected = false},${3:ImGuiSelectableFlags flags = 0},${4:const ImVec2& size = ImVec20},${5:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Selectable",
+		"scope": "source.lua"
+	},
+	"Selectable": {
+		"body": "Selectable(${1:const char* label},${2:bool* p_selected},${3:ImGuiSelectableFlags flags = 0},${4:const ImVec2& size = ImVec20},${5:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "Selectable",
+		"scope": "source.lua"
+	},
+	"ListBox": {
+		"body": "ListBox(${1:const char* label},${2:int* current_item},${3:const char* const* items},${4:int items_count},${5:int height_in_items = -1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ListBox",
+		"scope": "source.lua"
+	},
+	"ListBox": {
+		"body": "ListBox(${1:const char* label},${2:int* current_item},${3:bool *items_getter})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ListBox",
+		"scope": "source.lua"
+	},
+	"ListBoxHeader": {
+		"body": "ListBoxHeader(${1:const char* label},${2:const ImVec2& size = ImVec20},${3:})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ListBoxHeader",
+		"scope": "source.lua"
+	},
+	"ListBoxHeader": {
+		"body": "ListBoxHeader(${1:const char* label},${2:int items_count},${3:int height_in_items = -1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "ListBoxHeader",
+		"scope": "source.lua"
+	},
+	"ListBoxFooter": {
+		"body": "ListBoxFooter()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "ListBoxFooter",
+		"scope": "source.lua"
+	},
+	"Value": {
+		"body": "Value(${1:const char* prefix},${2:bool b})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Value",
+		"scope": "source.lua"
+	},
+	"Value": {
+		"body": "Value(${1:const char* prefix},${2:int v})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Value",
+		"scope": "source.lua"
+	},
+	"Value": {
+		"body": "Value(${1:const char* prefix},${2:unsigned int v})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Value",
+		"scope": "source.lua"
+	},
+	"Value": {
+		"body": "Value(${1:const char* prefix},${2:float v},${3:const char* float_format = NULL})",
+		"description": "ImGui\n\nreturn → Value(const char* prefix, float v, const char* float_format \n",
+		"prefix": "Value",
+		"scope": "source.lua"
+	},
+	"SetTooltip": {
+		"body": "SetTooltip(${1:const char* fmt},${2:...})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetTooltip",
+		"scope": "source.lua"
+	},
+	"SetTooltipV": {
+		"body": "SetTooltipV(${1:const char* fmt},${2:va_list args})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetTooltipV",
+		"scope": "source.lua"
+	},
+	"BeginTooltip": {
+		"body": "BeginTooltip()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "BeginTooltip",
+		"scope": "source.lua"
+	},
+	"EndTooltip": {
+		"body": "EndTooltip()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndTooltip",
+		"scope": "source.lua"
+	},
+	"BeginMainMenuBar": {
+		"body": "BeginMainMenuBar()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginMainMenuBar",
+		"scope": "source.lua"
+	},
+	"EndMainMenuBar": {
+		"body": "EndMainMenuBar()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndMainMenuBar",
+		"scope": "source.lua"
+	},
+	"BeginMenuBar": {
+		"body": "BeginMenuBar()",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginMenuBar",
+		"scope": "source.lua"
+	},
+	"EndMenuBar": {
+		"body": "EndMenuBar()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndMenuBar",
+		"scope": "source.lua"
+	},
+	"BeginMenu": {
+		"body": "BeginMenu(${1:const char* label},${2:bool enabled = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginMenu",
+		"scope": "source.lua"
+	},
+	"EndMenu": {
+		"body": "EndMenu()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndMenu",
+		"scope": "source.lua"
+	},
+	"MenuItem": {
+		"body": "MenuItem(${1:const char* label},${2:const char* shortcut = NULL},${3:bool selected = false},${4:bool enabled = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "MenuItem",
+		"scope": "source.lua"
+	},
+	"MenuItem": {
+		"body": "MenuItem(${1:const char* label},${2:const char* shortcut},${3:bool* p_selected},${4:bool enabled = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "MenuItem",
+		"scope": "source.lua"
+	},
+	"OpenPopup": {
+		"body": "OpenPopup(${1:const char* str_id})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "OpenPopup",
+		"scope": "source.lua"
+	},
+	"OpenPopupOnItemClick": {
+		"body": "OpenPopupOnItemClick(${1:const char* str_id = NULL},${2:int mouse_button = 1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "OpenPopupOnItemClick",
+		"scope": "source.lua"
+	},
+	"BeginPopup": {
+		"body": "BeginPopup(${1:const char* str_id})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginPopup",
+		"scope": "source.lua"
+	},
+	"BeginPopupModal": {
+		"body": "BeginPopupModal(${1:const char* name},${2:bool* p_open = NULL},${3:ImGuiWindowFlags extra_flags = 0})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginPopupModal",
+		"scope": "source.lua"
+	},
+	"BeginPopupContextItem": {
+		"body": "BeginPopupContextItem(${1:const char* str_id = NULL},${2:int mouse_button = 1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginPopupContextItem",
+		"scope": "source.lua"
+	},
+	"BeginPopupContextWindow": {
+		"body": "BeginPopupContextWindow(${1:const char* str_id = NULL},${2:int mouse_button = 1},${3:bool also_over_items = true})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginPopupContextWindow",
+		"scope": "source.lua"
+	},
+	"BeginPopupContextVoid": {
+		"body": "BeginPopupContextVoid(${1:const char* str_id = NULL},${2:int mouse_button = 1})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "BeginPopupContextVoid",
+		"scope": "source.lua"
+	},
+	"EndPopup": {
+		"body": "EndPopup()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndPopup",
+		"scope": "source.lua"
+	},
+	"IsPopupOpen": {
+		"body": "IsPopupOpen(${1:const char* str_id})",
+		"description": "ImGui\n\nreturn → bool \n",
+		"prefix": "IsPopupOpen",
+		"scope": "source.lua"
+	},
+	"CloseCurrentPopup": {
+		"body": "CloseCurrentPopup()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "CloseCurrentPopup",
+		"scope": "source.lua"
+	},
+	"Separator": {
+		"body": "Separator()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Separator",
+		"scope": "source.lua"
+	},
+	"SameLine": {
+		"body": "SameLine(${1:float pos_x = 0.0f},${2:float spacing_w = -1.0f})",
+		"description": "ImGui\n\nreturn → SameLine(float pos_x \n",
+		"prefix": "SameLine",
+		"scope": "source.lua"
+	},
+	"NewLine": {
+		"body": "NewLine()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "NewLine",
+		"scope": "source.lua"
+	},
+	"Spacing": {
+		"body": "Spacing()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Spacing",
+		"scope": "source.lua"
+	},
+	"Dummy": {
+		"body": "Dummy(${1:const ImVec2& size})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "Dummy",
+		"scope": "source.lua"
+	},
+	"Indent": {
+		"body": "Indent(${1:float indent_w = 0.0f})",
+		"description": "ImGui\n\nreturn → Indent(float indent_w \n",
+		"prefix": "Indent",
+		"scope": "source.lua"
+	},
+	"Unindent": {
+		"body": "Unindent(${1:float indent_w = 0.0f})",
+		"description": "ImGui\n\nreturn → Unindent(float indent_w \n",
+		"prefix": "Unindent",
+		"scope": "source.lua"
+	},
+	"BeginGroup": {
+		"body": "BeginGroup()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "BeginGroup",
+		"scope": "source.lua"
+	},
+	"EndGroup": {
+		"body": "EndGroup()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "EndGroup",
+		"scope": "source.lua"
+	},
+	"GetCursorPos": {
+		"body": "GetCursorPos()",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetCursorPos",
+		"scope": "source.lua"
+	},
+	"GetCursorPosX": {
+		"body": "GetCursorPosX()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetCursorPosX",
+		"scope": "source.lua"
+	},
+	"GetCursorPosY": {
+		"body": "GetCursorPosY()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetCursorPosY",
+		"scope": "source.lua"
+	},
+	"SetCursorPos": {
+		"body": "SetCursorPos(${1:const ImVec2& local_pos})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetCursorPos",
+		"scope": "source.lua"
+	},
+	"SetCursorPosX": {
+		"body": "SetCursorPosX(${1:float x})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetCursorPosX",
+		"scope": "source.lua"
+	},
+	"SetCursorPosY": {
+		"body": "SetCursorPosY(${1:float y})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetCursorPosY",
+		"scope": "source.lua"
+	},
+	"GetCursorStartPos": {
+		"body": "GetCursorStartPos()",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetCursorStartPos",
+		"scope": "source.lua"
+	},
+	"GetCursorScreenPos": {
+		"body": "GetCursorScreenPos()",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "GetCursorScreenPos",
+		"scope": "source.lua"
+	},
+	"SetCursorScreenPos": {
+		"body": "SetCursorScreenPos(${1:const ImVec2& pos})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "SetCursorScreenPos",
+		"scope": "source.lua"
+	},
+	"AlignTextToFramePadding": {
+		"body": "AlignTextToFramePadding()",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "AlignTextToFramePadding",
+		"scope": "source.lua"
+	},
+	"GetTextLineHeight": {
+		"body": "GetTextLineHeight()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetTextLineHeight",
+		"scope": "source.lua"
+	},
+	"GetTextLineHeightWithSpacing": {
+		"body": "GetTextLineHeightWithSpacing()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetTextLineHeightWithSpacing",
+		"scope": "source.lua"
+	},
+	"GetItemsLineHeightWithSpacing": {
+		"body": "GetItemsLineHeightWithSpacing()",
+		"description": "ImGui\n\nreturn → float \n",
+		"prefix": "GetItemsLineHeightWithSpacing",
+		"scope": "source.lua"
+	},
+	"imgui.ImVec2": {
+		"body": "imgui.ImVec2(${1:a},${2:b})",
+		"description": "ImGui\n\nreturn → ImVec2 \n",
+		"prefix": "imgui.ImVec2",
+		"scope": "source.lua"
+	},
+	"imgui.ImVec4": {
+		"body": "imgui.ImVec4(${1:a},${2:b},${3:c},${4:d})",
+		"description": "ImGui\n\nreturn → ImVec4 \n",
+		"prefix": "imgui.ImVec4",
+		"scope": "source.lua"
+	},
+	"imgui.ImInt": {
+		"body": "imgui.ImInt(${1:int v})",
+		"description": "ImGui\n\nreturn → local k \n",
+		"prefix": "imgui.ImInt",
+		"scope": "source.lua"
+	},
+	"imgui.ImBool": {
+		"body": "imgui.ImBool(${1:bool v})",
+		"description": "ImGui\n\nreturn → local k \n",
+		"prefix": "imgui.ImBool",
+		"scope": "source.lua"
+	},
+	"imgui.ImFloat": {
+		"body": "imgui.ImFloat(${1:float v})",
+		"description": "ImGui\n\nreturn → local k \n",
+		"prefix": "imgui.ImFloat",
+		"scope": "source.lua"
+	},
+	"imgui.CreateTextureFromFile": {
+		"body": "imgui.CreateTextureFromFile(${1:path})",
+		"description": "ImGui\n\nreturn → texture \n",
+		"prefix": "imgui.CreateTextureFromFile",
+		"scope": "source.lua"
+	},
+	"imgui.CreateTextureFromMemory": {
+		"body": "imgui.CreateTextureFromMemory(${1:address},${2:size})",
+		"description": "ImGui\n\nreturn → texture \n",
+		"prefix": "imgui.CreateTextureFromMemory",
+		"scope": "source.lua"
+	},
+	"imgui.GetTextureFromAddress": {
+		"body": "imgui.GetTextureFromAddress(${1:address})",
+		"description": "ImGui\n\nreturn → texture \n",
+		"prefix": "imgui.GetTextureFromAddress",
+		"scope": "source.lua"
+	},
+	"imgui.ReleaseTexture": {
+		"body": "imgui.ReleaseTexture(${1:texture})",
+		"description": "ImGui\n\nreturn → nil\n",
+		"prefix": "imgui.ReleaseTexture",
+		"scope": "source.lua"
+	}
+}

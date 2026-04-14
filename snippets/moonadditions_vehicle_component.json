@@ -1,0 +1,74 @@
+{
+	"material:get_ambient": {
+		"prefix": "material:get_ambient",
+		"body": "${1:float ambient =} ${2:material}:get_ambient()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nReturns the ambient lighting value of the material.\n\nreturn → float ambient\n",
+		"scope": "source.lua"
+	},
+	"material:set_ambient": {
+		"prefix": "material:set_ambient",
+		"body": "${1:material}:set_ambient(${2:float ambient})",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nSets the ambient lighting value of the material.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:reset_ambient": {
+		"prefix": "material:reset_ambient",
+		"body": "${1:material}:reset_ambient()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nResets the ambient value to its original.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:get_specular": {
+		"prefix": "material:get_specular",
+		"body": "${1:float specular =} ${2:material}:get_specular()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nReturns the specular highlight value of the material.\n\nreturn → float specular\n",
+		"scope": "source.lua"
+	},
+	"material:set_specular": {
+		"prefix": "material:set_specular",
+		"body": "${1:material}:set_specular(${2:float specular})",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nSets the specular highlight value of the material.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:reset_specular": {
+		"prefix": "material:reset_specular",
+		"body": "${1:material}:reset_specular()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nResets the specular value to its original.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:get_diffuse": {
+		"prefix": "material:get_diffuse",
+		"body": "${1:float diffuse =} ${2:material}:get_diffuse()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nReturns the diffuse lighting value of the material.\n\nreturn → float diffuse\n",
+		"scope": "source.lua"
+	},
+	"material:set_diffuse": {
+		"prefix": "material:set_diffuse",
+		"body": "${1:material}:set_diffuse(${2:float diffuse})",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nSets the diffuse lighting value of the material.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:reset_diffuse": {
+		"prefix": "material:reset_diffuse",
+		"body": "${1:material}:reset_diffuse()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nResets the diffuse value to its original.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:get_properties": {
+		"prefix": "material:get_properties",
+		"body": "${1:table<properties> properties =} ${2:material}:get_properties()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nGets all surface properties (ambient, specular, diffuse) and returns them in a Lua table.\n\nreturn → table<properties> properties\n",
+		"scope": "source.lua"
+	},
+	"material:set_properties": {
+		"prefix": "material:set_properties",
+		"body": "${1:material}:set_properties(${2:table_properties})",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nSets surface properties from a Lua table. Keys: ambient, specular, diffuse.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"material:reset_properties": {
+		"prefix": "material:reset_properties",
+		"body": "${1:material}:reset_properties()",
+		"description": "MoonAdditions (Dante-1337) — vehicle_object_material\n\nResets all surface properties to their original values.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	}
+}

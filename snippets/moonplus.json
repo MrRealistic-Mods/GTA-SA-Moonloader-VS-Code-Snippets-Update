@@ -1,0 +1,578 @@
+{
+	"MoonPlus": {
+		"prefix": "MoonPlus",
+		"body": "local mps = require('MoonPlus')",
+		"description": "Add MoonPlus require. Note: MoonAdditions must be required first.\n\nlocal mad = require('MoonAdditions')\nlocal mps = require('MoonPlus')\n",
+		"scope": "source.lua"
+	},
+	"mps.VERSION": {
+		"prefix": "mps.VERSION",
+		"body": "mps.VERSION",
+		"description": "MoonPlus\n\nReturns the current MoonPlus version string.\n\nreturn → string version_string\n",
+		"scope": "source.lua"
+	},
+	"mps.placeable.from_memory": {
+		"prefix": "mps.placeable.from_memory",
+		"body": "${1:placeable =} mps.placeable.from_memory(${2:uint address})",
+		"description": "MoonPlus — Placeable\n\nCreates a placeable object from a raw memory address.\n\nreturn → placeable\n",
+		"scope": "source.lua"
+	},
+	"placeable:set_matrix_scale": {
+		"prefix": "placeable:set_matrix_scale",
+		"body": "${1:placeable}:set_matrix_scale(${2:float scale})",
+		"description": "MoonPlus — Placeable\n\nScales the transformation matrix of the placeable object.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"placeable:get_matrix": {
+		"prefix": "placeable:get_matrix",
+		"body": "${1:matrix =} ${2:placeable}:get_matrix()",
+		"description": "MoonPlus — Placeable\n\nReturns the transformation matrix of the placeable object.\n\nreturn → matrix\n",
+		"scope": "source.lua"
+	},
+	"placeable:get_orientation": {
+		"prefix": "placeable:get_orientation",
+		"body": "${1:vector3d =} ${2:placeable}:get_orientation()",
+		"description": "MoonPlus — Placeable\n\nReturns the orientation vector of the placeable.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"placeable:get_top_vector": {
+		"prefix": "placeable:get_top_vector",
+		"body": "${1:vector3d =} ${2:placeable}:get_top_vector()",
+		"description": "MoonPlus — Placeable\n\nReturns the up/top direction vector of the placeable.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"placeable:get_forward_vector": {
+		"prefix": "placeable:get_forward_vector",
+		"body": "${1:vector3d =} ${2:placeable}:get_forward_vector()",
+		"description": "MoonPlus — Placeable\n\nReturns the forward direction vector of the placeable.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"placeable:get_right_vector": {
+		"prefix": "placeable:get_right_vector",
+		"body": "${1:vector3d =} ${2:placeable}:get_right_vector()",
+		"description": "MoonPlus — Placeable\n\nReturns the right direction vector of the placeable.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"placeable:is_within_area_2d": {
+		"prefix": "placeable:is_within_area_2d",
+		"body": "${1:bool =} ${2:placeable}:is_within_area_2d(${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2})",
+		"description": "MoonPlus — Placeable\n\nReturns true if the placeable is within the given 2D rectangular area.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"placeable:is_within_area_3d": {
+		"prefix": "placeable:is_within_area_3d",
+		"body": "${1:bool =} ${2:placeable}:is_within_area_3d(${3:float x1}, ${4:float y1}, ${5:float z1}, ${6:float x2}, ${7:float y2}, ${8:float z2})",
+		"description": "MoonPlus — Placeable\n\nReturns true if the placeable is within the given 3D rectangular area.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.is_entity_pointer_valid": {
+		"prefix": "mps.is_entity_pointer_valid",
+		"body": "${1:bool =} mps.is_entity_pointer_valid(${2:uint address})",
+		"description": "MoonPlus — Entity\n\nReturns true if the given memory address is a valid entity pointer.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.entity.from_memory": {
+		"prefix": "mps.entity.from_memory",
+		"body": "${1:entity =} mps.entity.from_memory(${2:uint address})",
+		"description": "MoonPlus — Entity\n\nCreates an entity object from a raw memory address.\n\nreturn → entity\n",
+		"scope": "source.lua"
+	},
+	"entity:get_rw_object_pointer": {
+		"prefix": "entity:get_rw_object_pointer",
+		"body": "${1:uint =} ${2:entity}:get_rw_object_pointer()",
+		"description": "MoonPlus — Entity\n\nReturns the RenderWare object pointer for this entity.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"entity:get_rw_object_type": {
+		"prefix": "entity:get_rw_object_type",
+		"body": "${1:uint =} ${2:entity}:get_rw_object_type()",
+		"description": "MoonPlus — Entity\n\nReturns the RenderWare object type (RP_ATOMIC = 1, RP_CLUMP = 2).\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"entity:get_rw_atomic_pointer": {
+		"prefix": "entity:get_rw_atomic_pointer",
+		"body": "${1:uint =} ${2:entity}:get_rw_atomic_pointer()",
+		"description": "MoonPlus — Entity\n\nReturns the RenderWare atomic pointer for this entity.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"entity:update_rw_frame": {
+		"prefix": "entity:update_rw_frame",
+		"body": "${1:entity}:update_rw_frame()",
+		"description": "MoonPlus — Entity\n\nUpdates the RenderWare frame for the entity, applying matrix changes.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"entity:set_rw_object_alpha": {
+		"prefix": "entity:set_rw_object_alpha",
+		"body": "${1:entity}:set_rw_object_alpha(${2:uint alpha})",
+		"description": "MoonPlus — Entity\n\nSets the alpha (transparency) of the RenderWare object. 0 = invisible, 255 = opaque.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"entity:get_bound_center": {
+		"prefix": "entity:get_bound_center",
+		"body": "${1:vector3d =} ${2:entity}:get_bound_center()",
+		"description": "MoonPlus — Entity\n\nReturns the center of the entity's bounding sphere as a vector3d.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"entity:get_com_distance_from_base": {
+		"prefix": "entity:get_com_distance_from_base",
+		"body": "${1:float =} ${2:entity}:get_com_distance_from_base()",
+		"description": "MoonPlus — Entity\n\nReturns the distance from the entity base to its center of mass.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"entity:has_pre_render_effects": {
+		"prefix": "entity:has_pre_render_effects",
+		"body": "${1:bool =} ${2:entity}:has_pre_render_effects()",
+		"description": "MoonPlus — Entity\n\nReturns true if the entity has pre-render effects enabled.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.physical.from_memory": {
+		"prefix": "mps.physical.from_memory",
+		"body": "${1:physical =} mps.physical.from_memory(${2:uint address})",
+		"description": "MoonPlus — Physical\n\nCreates a physical object from a raw memory address.\n\nreturn → physical\n",
+		"scope": "source.lua"
+	},
+	"physical:apply_move_force": {
+		"prefix": "physical:apply_move_force",
+		"body": "${1:physical}:apply_move_force(${2:vector3d force})",
+		"description": "MoonPlus — Physical\n\nApplies a movement force vector to the physical object.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"physical:apply_turn_force": {
+		"prefix": "physical:apply_turn_force",
+		"body": "${1:physical}:apply_turn_force(${2:vector3d force}, ${3:vector3d velocity})",
+		"description": "MoonPlus — Physical\n\nApplies a turning force to the object at the given velocity offset.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"physical:get_kinetic_energy": {
+		"prefix": "physical:get_kinetic_energy",
+		"body": "${1:float =} ${2:physical}:get_kinetic_energy()",
+		"description": "MoonPlus — Physical\n\nReturns the current kinetic energy of the physical object.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"physical:skip_physics": {
+		"prefix": "physical:skip_physics",
+		"body": "${1:physical}:skip_physics()",
+		"description": "MoonPlus — Physical\n\nSkips physics simulation for this object for the current frame.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"physical:get_friction_turn_speed": {
+		"prefix": "physical:get_friction_turn_speed",
+		"body": "${1:vector3d =} ${2:physical}:get_friction_turn_speed()",
+		"description": "MoonPlus — Physical\n\nReturns the friction turn speed of the physical object as a vector3d.\n\nreturn → vector3d\n",
+		"scope": "source.lua"
+	},
+	"mps.is_vehicle_pointer_valid": {
+		"prefix": "mps.is_vehicle_pointer_valid",
+		"body": "${1:bool =} mps.is_vehicle_pointer_valid(${2:uint address})",
+		"description": "MoonPlus — Vehicle\n\nReturns true if the given address points to a valid vehicle.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.vehicle.from_memory": {
+		"prefix": "mps.vehicle.from_memory",
+		"body": "${1:vehicle =} mps.vehicle.from_memory(${2:uint address})",
+		"description": "MoonPlus — Vehicle\n\nCreates a vehicle object from a raw memory address.\n\nreturn → vehicle\n",
+		"scope": "source.lua"
+	},
+	"mps.set_wheel_spin_values": {
+		"prefix": "mps.set_wheel_spin_values",
+		"body": "mps.set_wheel_spin_values(${1:float target_rate}, ${2:float in_air_target_rate}, ${3:float rise_rate}, ${4:float fall_rate})",
+		"description": "MoonPlus — Vehicle (global)\n\nSets the global wheel spin rate parameters for all vehicles.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.reset_wheel_spin_values": {
+		"prefix": "mps.reset_wheel_spin_values",
+		"body": "mps.reset_wheel_spin_values()",
+		"description": "MoonPlus — Vehicle (global)\n\nResets wheel spin rate parameters to their default values.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.set_wheel_spin_loss": {
+		"prefix": "mps.set_wheel_spin_loss",
+		"body": "mps.set_wheel_spin_loss(${1:float loss})",
+		"description": "MoonPlus — Vehicle (global)\n\nSets the global wheel spin loss value.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_air_resistance": {
+		"prefix": "mps.get_air_resistance",
+		"body": "${1:float =} mps.get_air_resistance()",
+		"description": "MoonPlus — Vehicle (global)\n\nReturns the global air resistance multiplier.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_air_resistance": {
+		"prefix": "mps.set_air_resistance",
+		"body": "mps.set_air_resistance(${1:float resistance})",
+		"description": "MoonPlus — Vehicle (global)\n\nSets the global air resistance multiplier.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_bike_wheel_turn_force": {
+		"prefix": "mps.get_bike_wheel_turn_force",
+		"body": "${1:float =} mps.get_bike_wheel_turn_force()",
+		"description": "MoonPlus — Vehicle (global)\n\nReturns the global bike wheel turning force.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_bike_wheel_turn_force": {
+		"prefix": "mps.set_bike_wheel_turn_force",
+		"body": "mps.set_bike_wheel_turn_force(${1:float force})",
+		"description": "MoonPlus — Vehicle (global)\n\nSets the global bike wheel turning force.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_flying_handling_pointer": {
+		"prefix": "vehicle:get_flying_handling_pointer",
+		"body": "${1:uint =} ${2:vehicle}:get_flying_handling_pointer()",
+		"description": "MoonPlus — Vehicle\n\nReturns a pointer to the vehicle's flying handling data (if applicable).\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"vehicle:blow_up": {
+		"prefix": "vehicle:blow_up",
+		"body": "${1:vehicle}:blow_up(${2:uint damager_pointer}, ${3:uint hide_explosion})",
+		"description": "MoonPlus — Vehicle\n\nBlows up the vehicle. Note: if you are inside the vehicle this may crash the game.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_contact_wheels_count": {
+		"prefix": "vehicle:get_contact_wheels_count",
+		"body": "${1:int =} ${2:vehicle}:get_contact_wheels_count()",
+		"description": "MoonPlus — Vehicle\n\nReturns the number of wheels currently in contact with a surface.\n\nreturn → int\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_width": {
+		"prefix": "vehicle:get_wheel_width",
+		"body": "${1:float =} ${2:vehicle}:get_wheel_width()",
+		"description": "MoonPlus — Vehicle\n\nReturns the width of the vehicle's wheels.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_transmission": {
+		"prefix": "vehicle:get_transmission",
+		"body": "${1:transmission =} ${2:vehicle}:get_transmission()",
+		"description": "MoonPlus — Vehicle\n\nReturns the transmission object for the vehicle.\n\nreturn → transmission\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_audio": {
+		"prefix": "vehicle:get_audio",
+		"body": "${1:vehicle_audio =} ${2:vehicle}:get_audio()",
+		"description": "MoonPlus — Vehicle\n\nReturns the vehicle_audio object for the vehicle.\n\nreturn → vehicle_audio\n",
+		"scope": "source.lua"
+	},
+	"vehicle:tell_to_go_to": {
+		"prefix": "vehicle:tell_to_go_to",
+		"body": "${1:vehicle}:tell_to_go_to(${2:float x}, ${3:float y}, ${4:float z}, ${5:float altitude_min}, ${6:float altitude_max})",
+		"description": "MoonPlus — Vehicle\n\nInstructs the vehicle (e.g. helicopter) to fly toward the given coordinates within the altitude range.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_suspension_compression": {
+		"prefix": "vehicle:get_wheel_suspension_compression",
+		"body": "${1:float =} ${2:vehicle}:get_wheel_suspension_compression(${3:uint wheel})",
+		"description": "MoonPlus — Vehicle\n\nReturns the suspension compression of the specified wheel.\nUse wheel_enum: FRONT_LEFT=0, REAR_LEFT=1, FRONT_RIGHT=2, REAR_RIGHT=3.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_rotation": {
+		"prefix": "vehicle:get_wheel_rotation",
+		"body": "${1:float =} ${2:vehicle}:get_wheel_rotation(${3:uint wheel})",
+		"description": "MoonPlus — Vehicle\n\nReturns the rotation angle of the specified wheel.\nUse wheel_enum: FRONT_LEFT=0, REAR_LEFT=1, FRONT_RIGHT=2, REAR_RIGHT=3.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_position": {
+		"prefix": "vehicle:get_wheel_position",
+		"body": "${1:float =} ${2:vehicle}:get_wheel_position(${3:uint wheel})",
+		"description": "MoonPlus — Vehicle\n\nReturns the position offset of the specified wheel.\nUse wheel_enum: FRONT_LEFT=0, REAR_LEFT=1, FRONT_RIGHT=2, REAR_RIGHT=3.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_speed": {
+		"prefix": "vehicle:get_wheel_speed",
+		"body": "${1:float =} ${2:vehicle}:get_wheel_speed(${3:uint wheel})",
+		"description": "MoonPlus — Vehicle\n\nReturns the spin speed of the specified wheel.\nUse wheel_enum: FRONT_LEFT=0, REAR_LEFT=1, FRONT_RIGHT=2, REAR_RIGHT=3.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_wheel_state": {
+		"prefix": "vehicle:get_wheel_state",
+		"body": "${1:int =} ${2:vehicle}:get_wheel_state(${3:uint wheel})",
+		"description": "MoonPlus — Vehicle\n\nReturns the state of the specified wheel.\nUse wheel_enum. Returns wheel_state: NORMAL=0, SPINNING=1, SKIDDING=2, FIXED=4.\n\nreturn → int\n",
+		"scope": "source.lua"
+	},
+	"vehicle:get_move_direction": {
+		"prefix": "vehicle:get_move_direction",
+		"body": "${1:float =} ${2:vehicle}:get_move_direction()",
+		"description": "MoonPlus — Vehicle\n\nReturns the current movement direction of the vehicle.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.transmission.from_memory": {
+		"prefix": "mps.transmission.from_memory",
+		"body": "${1:transmission =} mps.transmission.from_memory(${2:uint address})",
+		"description": "MoonPlus — Transmission\n\nCreates a transmission object from a raw memory address.\n\nreturn → transmission\n",
+		"scope": "source.lua"
+	},
+	"transmission:get_gear": {
+		"prefix": "transmission:get_gear",
+		"body": "${1:gear =} ${2:transmission}:get_gear(${3:uint gear})",
+		"description": "MoonPlus — Transmission\n\nReturns the gear object for the specified gear index.\n\nreturn → gear\n",
+		"scope": "source.lua"
+	},
+	"transmission:calculate_gear": {
+		"prefix": "transmission:calculate_gear",
+		"body": "${1:uint =} ${2:transmission}:calculate_gear(${3:float speed}, ${4:int current_gear})",
+		"description": "MoonPlus — Transmission\n\nCalculates which gear the vehicle should be in given the current speed and gear.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"transmission:calculate_acceleration": {
+		"prefix": "transmission:calculate_acceleration",
+		"body": "${1:float =} ${2:transmission}:calculate_acceleration(${3:float gas}, ${4:uint gear}, ${5:float gear_change_count}, ${6:float speed}, ${7:float unk1}, ${8:float unk2}, ${9:bool all_wheels_on_ground}, ${10:uint handling_cheat})",
+		"description": "MoonPlus — Transmission\n\nCalculates the acceleration force for the given engine/gear/speed state.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.gear.from_memory": {
+		"prefix": "mps.gear.from_memory",
+		"body": "${1:gear =} mps.gear.from_memory(${2:uint address})",
+		"description": "MoonPlus — Gear\n\nCreates a gear object from a raw memory address.\n\nreturn → gear\n",
+		"scope": "source.lua"
+	},
+	"mps.sound.from_memory": {
+		"prefix": "mps.sound.from_memory",
+		"body": "${1:sound =} mps.sound.from_memory(${2:uint address})",
+		"description": "MoonPlus — Sound\n\nCreates a sound object from a raw memory address.\n\nreturn → sound\n",
+		"scope": "source.lua"
+	},
+	"sound:stop": {
+		"prefix": "sound:stop",
+		"body": "${1:sound}:stop()",
+		"description": "MoonPlus — Sound\n\nStops the sound from playing.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"sound:calculate_frequency": {
+		"prefix": "sound:calculate_frequency",
+		"body": "${1:sound}:calculate_frequency()",
+		"description": "MoonPlus — Sound\n\nCalculates the sound's frequency based on its speed property.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"sound:update_frequency": {
+		"prefix": "sound:update_frequency",
+		"body": "${1:sound}:update_frequency()",
+		"description": "MoonPlus — Sound\n\nApplies the calculated frequency to the sound stream.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.is_ped_pointer_valid": {
+		"prefix": "mps.is_ped_pointer_valid",
+		"body": "${1:bool =} mps.is_ped_pointer_valid(${2:uint address})",
+		"description": "MoonPlus — Ped\n\nReturns true if the address points to a valid ped.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.ped.from_memory": {
+		"prefix": "mps.ped.from_memory",
+		"body": "${1:ped =} mps.ped.from_memory(${2:uint address})",
+		"description": "MoonPlus — Ped\n\nCreates a ped object from a raw memory address.\n\nreturn → ped\n",
+		"scope": "source.lua"
+	},
+	"ped:is_standing": {
+		"prefix": "ped:is_standing",
+		"body": "${1:bool =} ${2:ped}:is_standing()",
+		"description": "MoonPlus — Ped\n\nReturns true if the ped is currently standing (not airborne or fallen).\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"ped:is_aiming": {
+		"prefix": "ped:is_aiming",
+		"body": "${1:bool =} ${2:ped}:is_aiming()",
+		"description": "MoonPlus — Ped\n\nReturns true if the ped is currently aiming a weapon.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"ped:is_firing": {
+		"prefix": "ped:is_firing",
+		"body": "${1:bool =} ${2:ped}:is_firing()",
+		"description": "MoonPlus — Ped\n\nReturns true if the ped is currently firing a weapon.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"ped:get_vehicle_pointer": {
+		"prefix": "ped:get_vehicle_pointer",
+		"body": "${1:uint =} ${2:ped}:get_vehicle_pointer()",
+		"description": "MoonPlus — Ped\n\nReturns the raw memory pointer of the vehicle the ped is currently in.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"ped:clear_weapons": {
+		"prefix": "ped:clear_weapons",
+		"body": "${1:ped}:clear_weapons()",
+		"description": "MoonPlus — Ped\n\nRemoves all weapons from the ped.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.game_settings.get": {
+		"prefix": "mps.game_settings.get",
+		"body": "${1:game_settings =} mps.game_settings.get()",
+		"description": "MoonPlus — Game Settings\n\nReturns the game_settings object for reading/writing game configuration.\n\nreturn → game_settings\n",
+		"scope": "source.lua"
+	},
+	"game_settings:save_settings": {
+		"prefix": "game_settings:save_settings",
+		"body": "${1:game_settings}:save_settings()",
+		"description": "MoonPlus — Game Settings\n\nSaves the current game settings to disk.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_forced_weather": {
+		"prefix": "mps.get_forced_weather",
+		"body": "${1:uint =} mps.get_forced_weather()",
+		"description": "MoonPlus — Weather\n\nReturns the ID of the currently forced weather type.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"mps.set_forced_weather": {
+		"prefix": "mps.set_forced_weather",
+		"body": "mps.set_forced_weather(${1:uint type})",
+		"description": "MoonPlus — Weather\n\nForces a specific weather type. Use weather_type enum.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_next_weather": {
+		"prefix": "mps.get_next_weather",
+		"body": "${1:uint =} mps.get_next_weather()",
+		"description": "MoonPlus — Weather\n\nReturns the ID of the next queued weather type.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"mps.set_next_weather": {
+		"prefix": "mps.set_next_weather",
+		"body": "mps.set_next_weather(${1:uint type})",
+		"description": "MoonPlus — Weather\n\nSets the next weather type to transition into. Use weather_type enum.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_current_weather": {
+		"prefix": "mps.get_current_weather",
+		"body": "${1:uint =} mps.get_current_weather()",
+		"description": "MoonPlus — Weather\n\nReturns the ID of the current active weather type.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"mps.set_current_weather": {
+		"prefix": "mps.set_current_weather",
+		"body": "mps.set_current_weather(${1:uint type})",
+		"description": "MoonPlus — Weather\n\nSets the current active weather type. Use weather_type enum.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.forecast_weather": {
+		"prefix": "mps.forecast_weather",
+		"body": "${1:bool =} mps.forecast_weather(${2:uint type}, ${3:uint steps})",
+		"description": "MoonPlus — Weather\n\nSchedules a weather type to appear a given number of steps ahead in the forecast.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"mps.release_weather": {
+		"prefix": "mps.release_weather",
+		"body": "mps.release_weather()",
+		"description": "MoonPlus — Weather\n\nReleases any forced weather, returning control to the game's weather system.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.weather.get": {
+		"prefix": "mps.weather.get",
+		"body": "${1:weather =} mps.weather.get()",
+		"description": "MoonPlus — Weather\n\nReturns the weather object for reading/writing detailed weather properties.\n\nreturn → weather\n",
+		"scope": "source.lua"
+	},
+	"mps.get_extinguisher_aim_angle": {
+		"prefix": "mps.get_extinguisher_aim_angle",
+		"body": "${1:float =} mps.get_extinguisher_aim_angle()",
+		"description": "MoonPlus — Weapon\n\nReturns the aim angle of the fire extinguisher weapon.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_extinguisher_aim_angle": {
+		"prefix": "mps.set_extinguisher_aim_angle",
+		"body": "mps.set_extinguisher_aim_angle(${1:float angle})",
+		"description": "MoonPlus — Weapon\n\nSets the aim angle for the fire extinguisher weapon.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.create_damage_event": {
+		"prefix": "mps.create_damage_event",
+		"body": "mps.create_damage_event(${1:uint victim_pointer}, ${2:uint creator_pointer}, ${3:uint weaponType}, ${4:int damageFactor}, ${5:uint pedPiece}, ${6:int direction})",
+		"description": "MoonPlus — Weapon\n\nCreates a damage event targeting the victim from the creator with the given weapon and parameters.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_player_aim_scale": {
+		"prefix": "mps.get_player_aim_scale",
+		"body": "${1:float =} mps.get_player_aim_scale()",
+		"description": "MoonPlus — Weapon\n\nReturns the player aiming reticule scale multiplier.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_player_aim_scale": {
+		"prefix": "mps.set_player_aim_scale",
+		"body": "mps.set_player_aim_scale(${1:float scale})",
+		"description": "MoonPlus — Weapon\n\nSets the player aiming reticule scale multiplier.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_shotgun_spread": {
+		"prefix": "mps.get_shotgun_spread",
+		"body": "${1:float =} mps.get_shotgun_spread()",
+		"description": "MoonPlus — Weapon\n\nReturns the current shotgun pellet spread value.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_shotgun_spread": {
+		"prefix": "mps.set_shotgun_spread",
+		"body": "mps.set_shotgun_spread(${1:float spread})",
+		"description": "MoonPlus — Weapon\n\nSets the shotgun pellet spread value.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_shotgun_pellets_count": {
+		"prefix": "mps.get_shotgun_pellets_count",
+		"body": "${1:uint =} mps.get_shotgun_pellets_count()",
+		"description": "MoonPlus — Weapon\n\nReturns the number of pellets fired per shotgun shot.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"mps.set_shotgun_pellets_count": {
+		"prefix": "mps.set_shotgun_pellets_count",
+		"body": "mps.set_shotgun_pellets_count(${1:int count})",
+		"description": "MoonPlus — Weapon\n\nSets the number of pellets per shotgun shot. Max is 16 — higher values will crash the game.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_spas_pellets_count": {
+		"prefix": "mps.get_spas_pellets_count",
+		"body": "${1:uint =} mps.get_spas_pellets_count()",
+		"description": "MoonPlus — Weapon\n\nReturns the number of pellets fired per SPAS-12 shot.\n\nreturn → uint\n",
+		"scope": "source.lua"
+	},
+	"mps.set_spas_pellets_count": {
+		"prefix": "mps.set_spas_pellets_count",
+		"body": "mps.set_spas_pellets_count(${1:uint count})",
+		"description": "MoonPlus — Weapon\n\nSets the number of pellets per SPAS-12 shot.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.get_pellets_collision_scale": {
+		"prefix": "mps.get_pellets_collision_scale",
+		"body": "${1:float =} mps.get_pellets_collision_scale()",
+		"description": "MoonPlus — Weapon\n\nReturns the collision scale multiplier for shotgun pellets.\n\nreturn → float\n",
+		"scope": "source.lua"
+	},
+	"mps.set_pellets_collision_scale": {
+		"prefix": "mps.set_pellets_collision_scale",
+		"body": "mps.set_pellets_collision_scale(${1:float scale})",
+		"description": "MoonPlus — Weapon\n\nSets the collision scale multiplier for shotgun pellets.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"mps.weapon.from_memory": {
+		"prefix": "mps.weapon.from_memory",
+		"body": "${1:weapon =} mps.weapon.from_memory(${2:uint address})",
+		"description": "MoonPlus — Weapon\n\nCreates a weapon object from a raw memory address.\n\nreturn → weapon\n",
+		"scope": "source.lua"
+	},
+	"mps.weapon.from_ped": {
+		"prefix": "mps.weapon.from_ped",
+		"body": "${1:weapon =} mps.weapon.from_ped(${2:uint ped_ptr}, ${3:uint weapon_slot})",
+		"description": "MoonPlus — Weapon\n\nReturns the weapon object in the specified slot for the given ped pointer.\nUse weapon_slot enum.\n\nreturn → weapon\n",
+		"scope": "source.lua"
+	},
+	"weapon:reload": {
+		"prefix": "weapon:reload",
+		"body": "${1:weapon}:reload(${2:uint owner_address})",
+		"description": "MoonPlus — Weapon\n\nReloads the weapon for the given owner ped.\n\nreturn → nil\n",
+		"scope": "source.lua"
+	},
+	"weapon:is_two_handed": {
+		"prefix": "weapon:is_two_handed",
+		"body": "${1:bool =} ${2:weapon}:is_two_handed()",
+		"description": "MoonPlus — Weapon\n\nReturns true if the weapon requires two hands to hold.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"weapon:fire_sniper": {
+		"prefix": "weapon:fire_sniper",
+		"body": "${1:bool =} ${2:weapon}:fire_sniper(${3:uint creator_address}, ${4:uint victim_address}, ${5:vector3d target})",
+		"description": "MoonPlus — Weapon\n\nFires a sniper-type shot from the creator toward the target position.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"weapon:fire_area_effect": {
+		"prefix": "weapon:fire_area_effect",
+		"body": "${1:bool =} ${2:weapon}:fire_area_effect(${3:uint firing_entity_ptr}, ${4:vector3d origin}, ${5:uint target_ptr}, ${6:vector3d target})",
+		"description": "MoonPlus — Weapon\n\nFires an area-effect weapon (e.g. RPG) from the entity at the target.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	},
+	"weapon:fire_instant_hit_from_car": {
+		"prefix": "weapon:fire_instant_hit_from_car",
+		"body": "${1:bool =} ${2:weapon}:fire_instant_hit_from_car(${3:uint vehicle_ptr}, ${4:bool left_side}, ${5:bool right_side})",
+		"description": "MoonPlus — Weapon\n\nFires an instant-hit weapon from a vehicle, specifying which side.\n\nreturn → bool\n",
+		"scope": "source.lua"
+	}
+}
