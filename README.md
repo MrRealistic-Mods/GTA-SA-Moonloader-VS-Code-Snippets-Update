@@ -47,3 +47,6 @@ local mps = require "MoonPlus"
 - [Original Extension — UmGeek](https://github.com/UmGeek/snippets-moonloader-for-vscode)
 - [MoonAdditions Vehicle Component (Dante-1337)](https://github.com/Dante-1337/MoonAdditions/wiki/Vehicle-Component)
 - [MoonPlus Wiki](https://github.com/plasmaXZ/MoonPlus/wiki)
+
+## Support my work
+[Patreon](https://www.patreon.com/c/MrRealistic)
